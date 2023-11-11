@@ -1,0 +1,20 @@
+{
+  "extends": ["next/babel", "next/core-web-vitals", "airbnb", "airbnb-typescript", "prettier"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off", // import react 안해도 되는 설정
+    "quotes": ["off", "single"], // 쌍따옴표가 아닌 홑따옴표를 사용
+    "semi": ["error", "always"], // semi colon을 강제함
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+    "comma-dangle": ["error", "always-multiline"], // 두 줄 이상의 경우에는 후행 쉼표를 항상 사용, 한 개 일 때는 사용하지 않음
+    "object-curly-spacing": ["error", "always"], // 객체 괄호 앞 뒤 공백 추가
+    "space-in-parens": ["error", "never"], // 일반 괄호 앞 뒤 공백 추가
+    "computed-property-spacing": ["error", "never"], // 대괄호 앞 뒤 공백 추가하지 않음
+    "comma-spacing": ["error", { "before": false, "after": true }], // 반점 앞 뒤 공백: 앞에는 없고, 뒤에는 있게
+    "eol-last": ["error", "always"], // line의 가장 마지막 줄에는 개행 넣기
+    "no-tabs": ["error", { "allowIndentationTabs": true }], // \t의 사용을 금지하고 tab키의 사용은 허용
+    "no-unused-vars": "warn"
+  }
+}
