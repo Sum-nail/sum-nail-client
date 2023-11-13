@@ -1,5 +1,5 @@
 {
   "presets": ["next/babel"],
   "env": { "production": { "plugins": ["@emotion"] } },
-  "plugins": ["@emotion"]
+  "plugins": ["@emotion", "@babel/plugin-transform-private-methods"]
 }

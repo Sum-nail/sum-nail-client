@@ -3,6 +3,9 @@
 import React, { useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { RecoilRoot } from 'recoil';
+import GlobalStyle from '@/styles/Globalstyle';
+import { ThemeProvider } from '@emotion/react';
+import theme from '@/styles/theme';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [queryClient] = useState(
@@ -18,7 +21,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <body>
       <QueryClientProvider client={queryClient}>
-        <RecoilRoot>{children}</RecoilRoot>
+        <RecoilRoot>
+          <GlobalStyle />
+          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+        </RecoilRoot>
       </QueryClientProvider>
     </body>
   );
