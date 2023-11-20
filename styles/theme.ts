@@ -14,6 +14,7 @@ const colors = {
   pink_light: '#ff99d6',
   mint: '#57c4d3',
   green: '#28d678',
+  yellowFE: '#FEE500',
 };
 
 const fonts = {
@@ -75,6 +76,15 @@ const fonts = {
     font-weight: 600;
     line-height: normal;
     letter-spacing: -0.026rem;
+    font-style: normal;
+  `,
+  M14_1: css`
+    font-family: Pretendard;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.03rem;
     font-style: normal;
   `,
   M15_2: css`
