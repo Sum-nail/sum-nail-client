@@ -3,6 +3,7 @@ import { LogoIcon, MoneyIcon, MapPinIcon } from '@/public/icons';
 import Image from 'next/image';
 import styled from '@emotion/styled';
 import Card from '@/components/common/card';
+import { useRouter } from 'next/navigation';
 
 const Main = styled.div`
   padding: 0 1.6rem;
@@ -72,6 +73,7 @@ const Body = styled.div`
 `;
 
 export default function Home() {
+  const router = useRouter();
   return (
     <Main>
       <Header>
@@ -79,7 +81,7 @@ export default function Home() {
         <Profile></Profile>
       </Header>
       <SearchBar>
-        <SearchBarSection>
+        <SearchBarSection onClick={() => router.push('/search')}>
           <MapPinIcon />
           지하철역
         </SearchBarSection>
