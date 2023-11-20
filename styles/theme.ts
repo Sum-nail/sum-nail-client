@@ -10,6 +10,7 @@ const colors = {
   black: '#000000',
   pink_dark: '#E577C0',
   pink_pop: '#ff7bdc',
+  pink_pale: '#FCEDF6',
   pink_warm: '#ff95c8',
   pink_light: '#ff99d6',
   mint: '#57c4d3',
