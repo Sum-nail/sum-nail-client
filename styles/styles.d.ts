@@ -7,7 +7,9 @@ declare module '@emotion/react' {
       grayF7: string;
       grayF2: string;
       grayD9: string;
+      grayE5: string;
       gray91: string;
+      pinkFF: string;
       yellowFE: string;
       gray69: string;
       black: string;
