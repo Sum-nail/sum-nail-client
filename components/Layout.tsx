@@ -7,7 +7,7 @@ import GlobalStyle from '@/styles/Globalstyle';
 import { ThemeProvider } from '@emotion/react';
 import theme from '@/styles/theme';
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+function Layout({ children }: { children: React.ReactNode }) {
   const [queryClient] = useState(
     new QueryClient({
       defaultOptions: {
@@ -28,6 +28,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       </QueryClientProvider>
     </body>
   );
-};
+}
 
 export default Layout;

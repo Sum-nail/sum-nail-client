@@ -1,4 +1,5 @@
 'use client';
+
 import { ArrowUpIcon } from '@/public/icons';
 import styled from '@emotion/styled';
 
