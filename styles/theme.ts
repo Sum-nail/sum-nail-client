@@ -71,7 +71,7 @@ const fonts = {
   `,
   SB15_2: css`
     font-family: Pretendard;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
