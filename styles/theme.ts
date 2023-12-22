@@ -12,6 +12,7 @@ const colors = {
   pink_pop: '#ff7bdc',
   pink_warm: '#ff95c8',
   pink_light: '#ff99d6',
+  pink_light_button: '#FFEDF5',
   mint: '#57c4d3',
   green: '#28d678',
 };

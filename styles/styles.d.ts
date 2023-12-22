@@ -16,6 +16,7 @@ declare module '@emotion/react' {
       pink_light: string;
       mint: string;
       green: string;
+      pink_light_button: string;
     };
     fonts: {
       B56: SerializedStyles;
