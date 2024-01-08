@@ -3,15 +3,22 @@
 import DefaultBottomButton from '@/components/detail/DefaultBottomButton';
 import DetailNav from '@/components/detail/DetailNav';
 import ImageCarousel from '@/components/detail/ImageCarousel';
+import NailInfo from '@/components/detail/NailInfo';
+import styled from '@emotion/styled';
 
 function ShopDetailPage() {
   return (
-    <div>
+    <DetailContainer>
       <DetailNav />
       <DefaultBottomButton />
       <ImageCarousel />
-    </div>
+      <NailInfo />
+    </DetailContainer>
   );
 }
 
 export default ShopDetailPage;
+
+const DetailContainer = styled.div`
+  overflow: scroll;
+`;

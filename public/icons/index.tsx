@@ -6,3 +6,7 @@ export { default as BackButtonIcon } from './ic_back_button.svg';
 export { default as BookmarkIcon } from './ic_bookmark.svg';
 export { default as MainLogoIcon } from './ic_sn_logotype.svg';
 export { default as ImageIcon } from './image.svg';
+export { default as PersonIcon } from './ic_person.svg';
+export { default as ClockIcon } from './ic_Clock.svg';
+export { default as CalendarIcon } from './ic_Calendar.svg';
+export { default as CreditCardIcon } from './ic_CreditCard.svg';

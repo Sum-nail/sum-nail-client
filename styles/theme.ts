@@ -132,6 +132,23 @@ const fonts = {
     letter-spacing: -0.022rem;
     font-style: normal;
   `,
+
+  T16_600: css`
+    font-family: Pretendard;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.4rem;
+    letter-spacing: -0.1rem;
+  `,
+  T16_500: css`
+    font-family: Pretendard;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4rem;
+    letter-spacing: -0.1rem;
+  `,
 };
 
 const theme: Theme = { colors, fonts };
