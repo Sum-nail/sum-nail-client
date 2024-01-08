@@ -1,17 +1,19 @@
 'use client';
+import styled from '@emotion/styled';
+import { useGetShops } from '@/hooks';
 import { LogoIcon } from '@/public/icons';
 import Image from 'next/image';
-import styled from '@emotion/styled';
 import Card from '@/components/common/card';
 import { useState } from 'react';
 import theme from '@/styles/theme';
 import StationRecord from '@/components/common/stationRecord';
 import StationSearchBar from '@/components/common/stationSearchBar';
 
-const TAGS = ['귀여운', '심플한', '화려한', '시크한', '예쁜', '블링블링한'];
-
 function Home() {
+  const { list } = useGetShops();
+  const TAGS = ['귀여운', '심플한', '화려한', '시크한', '예쁜', '블링블링한'];
   const [selected, setSelected] = useState(0);
+  if (!list) return <></>;
   return (
     <Main>
       <Header>
