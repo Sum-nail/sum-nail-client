@@ -7,3 +7,5 @@ export { default as MapPinIcon } from './map_pin.svg';
 export { default as MoneyIcon } from './money.svg';
 export { default as BackIcon } from './ic_back.svg';
 export { default as DeleteIcon } from './ic_delete.svg';
+export { default as PinkFlowerIcon } from './ic_pink_flower.svg';
+export { default as GrayFlowerIcon } from './ic_gray_flower.svg';
