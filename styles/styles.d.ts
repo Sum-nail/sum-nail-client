@@ -12,6 +12,7 @@ declare module '@emotion/react' {
       black: string;
       pink_dark: string;
       pink_pop: string;
+      pink_pale: string;
       pink_warm: string;
       pink_light: string;
       mint: string;
