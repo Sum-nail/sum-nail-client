@@ -3,7 +3,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import ShortcutsLink from './NailInfo/ ShortcutsLink';
-import NailCost from './NailInfo/NailCost';
 
 const info = {
   nailshopName: '네일 유애나',
@@ -35,7 +34,6 @@ function NailInfo() {
         ))}
       </HashTagsWrapper>
       <ShortcutsLink />
-      <NailCost />
     </div>
   );
 }

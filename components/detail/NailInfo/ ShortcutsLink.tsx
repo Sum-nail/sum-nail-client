@@ -48,6 +48,8 @@ const BoxStyle = styled.div`
   height: 8.1rem;
 
   border: 1px solid ${({ theme }) => theme.colors.grayF2};
+
+  margin-bottom: 5.7rem;
 `;
 
 const ShortcutsLinkContainer = styled.div`
@@ -55,4 +57,5 @@ const ShortcutsLinkContainer = styled.div`
   justify-content: center;
   gap: 0.8rem;
   margin-top: 3.05rem;
+  border-bottom: 8px solid ${({ theme }) => theme.colors.grayF7};
 `;

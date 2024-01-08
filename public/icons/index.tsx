@@ -10,3 +10,5 @@ export { default as PersonIcon } from './ic_person.svg';
 export { default as ClockIcon } from './ic_Clock.svg';
 export { default as CalendarIcon } from './ic_Calendar.svg';
 export { default as CreditCardIcon } from './ic_CreditCard.svg';
+export { default as MapPinIcon } from './ic_MapPin.svg';
+export { default as NaviIcon } from './ic_Navi.svg';
