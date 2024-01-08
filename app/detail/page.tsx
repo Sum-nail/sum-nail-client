@@ -4,6 +4,7 @@ import DefaultBottomButton from '@/components/detail/DefaultBottomButton';
 import DetailNav from '@/components/detail/DetailNav';
 import ImageCarousel from '@/components/detail/ImageCarousel';
 import NailInfo from '@/components/detail/NailInfo';
+import OpeningHour from '@/components/detail/OpeningHour';
 import StoreMap from '@/components/detail/StoreMap';
 import styled from '@emotion/styled';
 
@@ -15,6 +16,7 @@ function ShopDetailPage() {
       <ImageCarousel />
       <NailInfo />
       <StoreMap />
+      <OpeningHour />
     </DetailContainer>
   );
 }
