@@ -6,7 +6,7 @@ export const getHashTags = async (): Promise<GetHashTagsOutput> => {
   return data;
 };
 
-export const getStations = async (keyword: string): Promise<GetStationsOutput> => {
-  const { data } = await client.get<GetStationsOutput>(`v1/stations?keyword=${keyword}`);
+export const getStations = async (station: string): Promise<GetStationsOutput> => {
+  const { data } = await client.get<GetStationsOutput>(`v1/stations?keyword=${station}`);
   return data;
 };

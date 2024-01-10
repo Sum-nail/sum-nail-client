@@ -1,11 +1,20 @@
 import { MapPinIcon } from '@/public/icons';
 import { useRouter } from 'next/navigation';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styled from '@emotion/styled';
+import { useGetStations } from '@/hooks';
 
-function StationSearchBar({ cntPage }: { cntPage: string }) {
+function StationSearchBar({
+  cntPage,
+  onChangeStations,
+}: {
+  cntPage: string;
+  onChangeStations?: (data: any) => void | undefined;
+}) {
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
+  const [searchText, setSearchText] = useState('');
+  const data = useGetStations(searchText);
 
   useEffect(() => {
     if (cntPage == 'search' && inputRef.current) {
@@ -13,12 +22,24 @@ function StationSearchBar({ cntPage }: { cntPage: string }) {
     }
   }, []);
 
+  useEffect(() => {
+    if (onChangeStations) {
+      if (searchText == '') {
+        onChangeStations([]);
+      } else {
+        onChangeStations(data);
+      }
+    }
+  }, [data]);
+
   return (
     <SearchContainer>
       <SearchBar
         ref={inputRef}
         placeholder={cntPage == 'search' ? '지하철 역 이름을 입력해주세요.' : '지하철역'}
+        value={searchText}
         onClick={cntPage == 'home' ? () => router.push('/search') : undefined}
+        onChange={(e) => setSearchText(e.target.value)}
       ></SearchBar>
       <MapIconWrapper>
         <MapPinIcon />
