@@ -1,13 +1,33 @@
 'use client';
 
 import styled from '@emotion/styled';
+import { useState } from 'react';
+import ModalPortal from '../common/ModalPotal';
+import LoginModal from '../common/LoginModal';
 
 function DefaultBottomButton() {
+  const [isModal, setIsModal] = useState(false);
+
+  const hadleOnCloseModal = () => {
+    setIsModal(false);
+  };
+
+  const hadleOnResevationClick = () => {
+    setIsModal(true);
+  };
+
   return (
-    <BottomButtonContainer>
-      <GoReservationButton>샵 예약하기</GoReservationButton>
-      <GoMonthNail>이달의 네일 구경하기</GoMonthNail>
-    </BottomButtonContainer>
+    <>
+      <BottomButtonContainer>
+        <GoReservationButton onClick={hadleOnResevationClick}>네일샵 예약하기</GoReservationButton>
+        <GoMonthNail>인스타 구경하기</GoMonthNail>
+      </BottomButtonContainer>
+      {isModal && (
+        <ModalPortal>
+          <LoginModal hadleOnCloseModal={hadleOnCloseModal} />
+        </ModalPortal>
+      )}
+    </>
   );
 }
 
