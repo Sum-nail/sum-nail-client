@@ -3,16 +3,17 @@ import styled from '@emotion/styled';
 import React, { Dispatch, SetStateAction } from 'react';
 
 interface LongBottomButtonProps {
+  buttonText: string;
   borderRadius: string;
   backgroundColor: string;
   buttonHandler: () => void;
 }
 
-const LongBottomButton = ({ buttonHandler, borderRadius, backgroundColor }: LongBottomButtonProps) => {
+const LongBottomButton = ({ buttonText, buttonHandler, borderRadius, backgroundColor }: LongBottomButtonProps) => {
   return (
     <ButtonContainer>
       <Button onClick={buttonHandler} borderRadius={borderRadius} backgroundColor={backgroundColor}>
-        간편 로그인하기
+        {buttonText}
       </Button>
     </ButtonContainer>
   );

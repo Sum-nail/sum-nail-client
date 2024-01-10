@@ -24,7 +24,12 @@ function LoginModal(props: ModalProps) {
             <LogInText>카카오톡이나 구글로 간편하게 로그인할 수 있어요.</LogInText>
           </ModalTextWrapper>
           <>
-            <LongBottomButton borderRadius={'8px'} buttonHandler={handleOnLoginClick} backgroundColor="#FF7BD2" />
+            <LongBottomButton
+              borderRadius={'8px'}
+              buttonHandler={handleOnLoginClick}
+              backgroundColor="#FF7BD2"
+              buttonText={'간편 로그인하기'}
+            />
           </>
         </ModalWrapper>
       </ModalContainer>
