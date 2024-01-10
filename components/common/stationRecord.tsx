@@ -1,13 +1,16 @@
 import styled from '@emotion/styled';
 import { DeleteIcon } from '@/public/icons';
+import { useGetStationsRecords } from '@/hooks';
 
 function StationRecord() {
+  const data = useGetStationsRecords();
+  if (!data) return <></>;
   return (
     <Main>
       <StationTags>
-        <StationTag>역삼역</StationTag>
-        <StationTag>디지털미디어시티역</StationTag>
-        <StationTag>답십리역</StationTag>
+        {data.stations.map((item) => (
+          <StationTag key={item}>{item}역</StationTag>
+        ))}
       </StationTags>
       <RecordDeletion>
         <DeleteIcon />

@@ -8,6 +8,8 @@ import StationRecord from '@/components/common/stationRecord';
 import StationSearchBar from '@/components/common/stationSearchBar';
 import { SubwayType } from '@/types';
 import StationLine from './stationLine';
+import { addStations } from '@/api/common';
+import { Router } from 'next/router';
 
 function Search() {
   const router = useRouter();
@@ -35,7 +37,12 @@ function Search() {
       <StationList>
         {stations &&
           stations.map((item) => (
-            <StationListItem>
+            <StationListItem
+              onClick={() => {
+                addStations(item.stationName);
+                router.back();
+              }}
+            >
               <StationName>{item.stationName}역</StationName>
               <StationLine stationLine={item.stationLine} />
             </StationListItem>
