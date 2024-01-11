@@ -36,6 +36,7 @@ declare module '@emotion/react' {
       M13_2: SerializedStyles;
       R13_2: SerializedStyles;
       R11_2: SerializedStyles;
+      R14: SerializedStyles;
     };
   }
 }
