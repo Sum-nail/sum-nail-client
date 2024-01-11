@@ -114,6 +114,14 @@ const fonts = {
     letter-spacing: -0.026rem;
     font-style: normal;
   `,
+  R14: css`
+    font-family: Pretendard;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-style: normal;
+  `,
   R13_2: css`
     font-family: Pretendard;
     font-size: 1.3rem;

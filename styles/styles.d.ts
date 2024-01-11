@@ -8,6 +8,8 @@ declare module '@emotion/react' {
       grayF2: string;
       grayD9: string;
       gray91: string;
+      pinkFF: string;
+      yellowFE: string;
       gray69: string;
       black: string;
       pink_dark: string;
@@ -32,6 +34,7 @@ declare module '@emotion/react' {
       M13_2: SerializedStyles;
       R13_2: SerializedStyles;
       R11_2: SerializedStyles;
+      R14: SerializedStyles;
     };
   }
 }
