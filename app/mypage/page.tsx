@@ -9,7 +9,7 @@ import styled from '@emotion/styled';
 import { useState } from 'react';
 import StoredList from './StoredList';
 
-export default function Home() {
+export default function Mypage() {
   const [userId, setUserId] = useState('hello');
   return (
     <Container>
