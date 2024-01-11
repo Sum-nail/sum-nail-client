@@ -21,3 +21,7 @@ export const getStationsRecords = async (): Promise<GetStationsRecordsOutput> =>
   const { data } = await client.get<GetStationsRecordsOutput>(`v1/user/search-station-history`);
   return data;
 };
+
+export const deleteStationsRecords = async () => {
+  await client.delete(`v1/user/search-station-history`);
+};

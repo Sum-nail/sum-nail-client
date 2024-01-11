@@ -1,9 +1,11 @@
 import styled from '@emotion/styled';
 import { DeleteIcon } from '@/public/icons';
-import { useGetStationsRecords } from '@/hooks';
+import { useGetStationsRecords, useDeleteStationsRecords } from '@/hooks';
 
 function StationRecord() {
   const data = useGetStationsRecords();
+  const { mutation: deleteStationRecord } = useDeleteStationsRecords();
+
   if (!data) return <></>;
   return (
     <Main>
@@ -12,10 +14,12 @@ function StationRecord() {
           <StationTag key={item}>{item}역</StationTag>
         ))}
       </StationTags>
-      <RecordDeletion>
-        <DeleteIcon />
-        기록삭제
-      </RecordDeletion>
+      {data.stations.length > 0 && (
+        <RecordDeletion onClick={() => deleteStationRecord.mutate()}>
+          <DeleteIcon />
+          기록삭제
+        </RecordDeletion>
+      )}
     </Main>
   );
 }
