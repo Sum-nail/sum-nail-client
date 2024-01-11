@@ -10,6 +10,7 @@ const colors = {
   black: '#000000',
   pink_dark: '#E577C0',
   pink_pop: '#ff7bdc',
+  pink_pale: '#FCEDF6',
   pink_warm: '#ff95c8',
   pink_light: '#ff99d6',
   pink_light_button: '#FFEDF5',
@@ -71,7 +72,7 @@ const fonts = {
   `,
   SB15_2: css`
     font-family: Pretendard;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;

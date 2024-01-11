@@ -1,13 +1,13 @@
 import React from 'react';
 import ImageCarousel from './ImageCarousel';
 import styled from '@emotion/styled';
-import { MapPinIcon } from '@/public/icons';
+import { DetailMapPinIcon } from '@/public/icons';
 
 function ThisMonthNail() {
   return (
     <div>
       <ThisMonthNailTitleWrapper>
-        <MapPinIcon />
+        <DetailMapPinIcon />
         <ThisMonthNailText>이달의 네일</ThisMonthNailText>
       </ThisMonthNailTitleWrapper>
       <ImageWrapper>
