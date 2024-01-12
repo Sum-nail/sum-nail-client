@@ -7,7 +7,7 @@ interface ProfileCardProps {
   email?: string;
   profileImg?: string;
 }
-export default function ProfileCard({ nickname, email, profileImg }: ProfileCardProps) {
+function ProfileCard({ nickname, email, profileImg }: ProfileCardProps) {
   const nameTxt = useMemo(() => (nickname ? `${nickname} 님` : '로그인하세요'), [nickname]);
 
   return (
@@ -18,6 +18,8 @@ export default function ProfileCard({ nickname, email, profileImg }: ProfileCard
     </ProfileCardContainer>
   );
 }
+
+export default ProfileCard;
 
 interface ProfileProps {
   imgSrc: string;

@@ -8,7 +8,7 @@ import EmptyBox from './EmptyBox';
 interface StoredListProps {
   userId: string;
 }
-export default function StoredList({ userId }: StoredListProps) {
+function StoredList({ userId }: StoredListProps) {
   useEffect(() => {
     scrollView.current?.scrollIntoView();
   }, []);
@@ -38,6 +38,8 @@ export default function StoredList({ userId }: StoredListProps) {
     </ContentContainer>
   );
 }
+
+export default StoredList;
 
 const ContentContainer = styled.section`
   padding-top: 1.7rem;

@@ -6,7 +6,7 @@ interface NailSelectProps {
   handler: (item: string) => void;
   selected: string;
 }
-export default function NailSelect({ items, selected, handler }: NailSelectProps) {
+function NailSelect({ items, selected, handler }: NailSelectProps) {
   return (
     <Container>
       {items.map((item) => (
@@ -17,6 +17,8 @@ export default function NailSelect({ items, selected, handler }: NailSelectProps
     </Container>
   );
 }
+
+export default NailSelect;
 
 const Container = styled.div`
   display: flex;

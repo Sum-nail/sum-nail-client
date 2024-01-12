@@ -6,7 +6,7 @@ import theme from '@/styles/theme';
 interface EmptyBoxProps {
   txt: string;
 }
-export default function EmptyBox({ txt }: EmptyBoxProps) {
+function EmptyBox({ txt }: EmptyBoxProps) {
   return (
     <StoredEmpty>
       <NailArtGray />
@@ -14,6 +14,7 @@ export default function EmptyBox({ txt }: EmptyBoxProps) {
     </StoredEmpty>
   );
 }
+export default EmptyBox;
 
 const StoredEmpty = styled.div`
   margin-top: 1.8rem;

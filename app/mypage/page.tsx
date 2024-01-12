@@ -8,8 +8,7 @@ import SocialLoginBtn from '@/components/myPage/SocialLoginBtn';
 import styled from '@emotion/styled';
 import { useState } from 'react';
 import StoredList from './StoredList';
-
-export default function Mypage() {
+function Mypage() {
   const [userId, setUserId] = useState('hello');
   return (
     <Container>
@@ -30,6 +29,8 @@ export default function Mypage() {
     </Container>
   );
 }
+
+export default Mypage;
 
 const Container = styled.div`
   width: 100%;
