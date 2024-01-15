@@ -44,7 +44,7 @@ const SearchBar = styled.input`
   margin: 1.6rem 0rem;
   height: 4.6rem;
   width: 36rem;
-  border-radius: 40px;
+  border-radius: 4rem;
   padding-left: 4rem;
   background: ${({ theme }) => theme.colors.pink_pale};
   box-shadow: 0px 1px 4px 0px rgba(255, 103, 176, 0.16) inset;

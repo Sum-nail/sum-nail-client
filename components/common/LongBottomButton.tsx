@@ -34,6 +34,6 @@ const Button = styled.button<{ borderRadius: string; backgroundColor: string }>`
   height: 5.6rem;
   ${({ theme }) => theme.fonts.SB15_2};
   background-color: ${(props) => props.backgroundColor || '#FF7BD2'};
-  border-radius: ${(props) => props.borderRadius || '8px'};
+  border-radius: ${(props) => props.borderRadius || '0.8rem'};
   color: ${({ theme }) => theme.colors.white};
 `;

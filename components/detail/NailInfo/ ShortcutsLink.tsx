@@ -26,7 +26,7 @@ function ShortcutsLink() {
 export default ShortcutsLink;
 
 const BoldText = styled.p`
-  border-bottom: 1px solid ${({ theme }) => theme.colors.black};
+  border-bottom: 0.1rem solid ${({ theme }) => theme.colors.black};
   margin-top: 0.4rem;
   color: ${({ theme }) => theme.colors.black};
   ${({ theme }) => theme.fonts.SB13_2};
@@ -47,7 +47,7 @@ const BoxStyle = styled.div`
   width: 11.4rem;
   height: 8.1rem;
 
-  border: 1px solid ${({ theme }) => theme.colors.grayF2};
+  border: 0.1rem solid ${({ theme }) => theme.colors.grayF2};
 
   margin-bottom: 5.7rem;
 `;
@@ -57,5 +57,5 @@ const ShortcutsLinkContainer = styled.div`
   justify-content: center;
   gap: 0.8rem;
   margin-top: 3.05rem;
-  border-bottom: 8px solid ${({ theme }) => theme.colors.grayF7};
+  border-bottom: 0.8rem solid ${({ theme }) => theme.colors.grayF7};
 `;

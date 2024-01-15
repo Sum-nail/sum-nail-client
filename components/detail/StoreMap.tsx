@@ -23,7 +23,7 @@ function StoreMap() {
 export default StoreMap;
 
 const StoreMapContainer = styled.div`
-  border-bottom: 8px solid ${({ theme }) => theme.colors.grayF7};
+  border-bottom: 0.8rem solid ${({ theme }) => theme.colors.grayF7};
 `;
 
 const ButtonContainer = styled.div`

@@ -25,7 +25,7 @@ function LoginModal(props: ModalProps) {
           </ModalTextWrapper>
           <>
             <LongBottomButton
-              borderRadius={'8px'}
+              borderRadius={'0.8rem'}
               buttonHandler={handleOnLoginClick}
               backgroundColor="#FF7BD2"
               buttonText={'간편 로그인하기'}

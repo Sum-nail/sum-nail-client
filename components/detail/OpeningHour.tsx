@@ -66,7 +66,7 @@ const OpenText = styled.p`
 
 const OpeningHourContainer = styled.div`
   padding: 2.4rem;
-  border-bottom: 8px solid ${({ theme }) => theme.colors.grayF7};
+  border-bottom: 0.8rem solid ${({ theme }) => theme.colors.grayF7};
 `;
 
 const OpeningTitleWrapper = styled.div`

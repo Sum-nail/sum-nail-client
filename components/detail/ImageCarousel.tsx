@@ -24,7 +24,7 @@ function ImageCarousel() {
         style={{
           width: '100%',
           position: 'absolute',
-          bottom: '24px',
+          bottom: '2.4rem',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
