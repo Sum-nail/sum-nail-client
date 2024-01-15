@@ -80,7 +80,7 @@ const StationList = styled.ul`
   overflow-y: scroll;
   border: 1px solid var(--gray-F2, #f2f2f2) 0px;
 
-  & > *:first-child {
+  & > *:first-of-type {
     border-top: 1px solid var(--gray-F2, #f2f2f2);
   }
 

@@ -22,7 +22,7 @@ function StationLine({ stationLine }: Pick<SubwayType, 'stationLine'>) {
     <>
       {Array.isArray(stationLine) ? (
         stationLine.map((num, index) => (
-          <StationLineIcon borderColor={line_color[deleteFirstZero(num)] || DEFAULT_COLOR}>
+          <StationLineIcon key={index} borderColor={line_color[deleteFirstZero(num)] || DEFAULT_COLOR}>
             <p className="font-system5_medium text-system5_medium text-white ">{deleteLineString(num)}</p>
           </StationLineIcon>
         ))
