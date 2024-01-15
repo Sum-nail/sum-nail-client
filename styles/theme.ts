@@ -5,6 +5,8 @@ const colors = {
   grayF7: '#f7f7f7',
   grayF2: '#f2f2f2',
   grayD9: '#d9d9d9',
+  grayE5: '#E5E5E5',
+  pinkFF: '#ff64c1',
   gray91: '#919191',
   gray69: '#696969',
   black: '#000000',
@@ -16,6 +18,7 @@ const colors = {
   pink_light_button: '#FFEDF5',
   mint: '#57c4d3',
   green: '#28d678',
+  yellowFE: '#FEE500',
 };
 
 const fonts = {
@@ -79,6 +82,15 @@ const fonts = {
     letter-spacing: -0.026rem;
     font-style: normal;
   `,
+  M14_1: css`
+    font-family: Pretendard;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.03rem;
+    font-style: normal;
+  `,
   M15_2: css`
     font-family: Pretendard;
     font-size: 1.5rem;
@@ -113,6 +125,14 @@ const fonts = {
     font-weight: 500;
     line-height: normal;
     letter-spacing: -0.026rem;
+    font-style: normal;
+  `,
+  R14: css`
+    font-family: Pretendard;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     font-style: normal;
   `,
   R13_2: css`
