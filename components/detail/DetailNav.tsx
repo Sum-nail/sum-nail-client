@@ -19,14 +19,14 @@ export default DetailNav;
 
 const NavContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 `;
 
 const BackButton = styled(BackButtonIcon)`
-  margin-top: 0.8rem;
+  margin: 0.8rem 0 0 1.2rem;
 `;
 
 const Bookmark = styled(BookmarkIcon)`
-  margin-top: 1.1rem;
+  margin: 1.1rem 1.2rem 0 0;
 `;
