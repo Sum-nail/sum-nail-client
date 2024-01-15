@@ -8,11 +8,11 @@ import StationRecord from '@/components/common/stationRecord';
 import StationSearchBar from '@/components/common/stationSearchBar';
 import { SubwayType } from '@/types';
 import StationLine from './stationLine';
-import { addStations } from '@/api/common';
-import { Router } from 'next/router';
+import { useAddStations } from '@/hooks';
 
 function Search() {
   const router = useRouter();
+  const { mutation: addStationRecord } = useAddStations();
   const [stations, setStations] = useState<SubwayType[]>();
 
   const onChangeStations = (data: any) => {
@@ -38,8 +38,9 @@ function Search() {
         {stations &&
           stations.map((item) => (
             <StationListItem
+              key={item.stationName}
               onClick={() => {
-                addStations(item.stationName);
+                addStationRecord.mutate(item.stationName);
                 router.back();
               }}
             >

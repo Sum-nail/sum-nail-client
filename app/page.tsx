@@ -27,7 +27,7 @@ function Home() {
 
       <StoreTags>
         {TAGS.map((data, index) => (
-          <StoreTag onClick={() => setSelected(index)} index={index} selected={selected}>
+          <StoreTag key={index} onClick={() => setSelected(index)} index={index} selected={selected}>
             {data}
           </StoreTag>
         ))}

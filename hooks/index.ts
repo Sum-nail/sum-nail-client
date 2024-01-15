@@ -1,6 +1,6 @@
 //훅 관련 폴더입니당!
 import { getShops, getSearchingShop, getShopDetails } from '@/api/nail-shops';
-import { getStations, getStationsRecords, deleteStationsRecords } from '@/api/common';
+import { getStations, getStationsRecords, deleteStationsRecords, addStations } from '@/api/common';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 
 export const useGetShops = () => {
@@ -43,6 +43,15 @@ export const useGetStationsRecords = () => {
   return data;
 };
 
+export const useAddStations = () => {
+  const queryClient = useQueryClient();
+
+  const mutation = useMutation({
+    mutationFn: addStations,
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['StationRecord'] }),
+  });
+  return { mutation };
+};
 export const useDeleteStationsRecords = () => {
   const queryClient = useQueryClient();
 
