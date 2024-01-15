@@ -5,10 +5,12 @@ interface Props {
   children: ReactNode;
 }
 
-const ModalPortal = ({ children }: Props) => {
+import React from 'react';
+
+function ModalPotal({ children }: Props) {
   const el = document.getElementById('modal-root') as HTMLElement;
 
   return ReactDom.createPortal(children as any, el);
-};
+}
 
-export default ModalPortal;
+export default ModalPotal;
