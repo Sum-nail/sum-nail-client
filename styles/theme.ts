@@ -15,6 +15,7 @@ const colors = {
   pink_pale: '#FCEDF6',
   pink_warm: '#ff95c8',
   pink_light: '#ff99d6',
+  pink_light_button: '#FFEDF5',
   mint: '#57c4d3',
   green: '#28d678',
   yellowFE: '#FEE500',
@@ -151,6 +152,23 @@ const fonts = {
     line-height: normal;
     letter-spacing: -0.022rem;
     font-style: normal;
+  `,
+
+  T16_600: css`
+    font-family: Pretendard;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.4rem;
+    letter-spacing: -0.1rem;
+  `,
+  T16_500: css`
+    font-family: Pretendard;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4rem;
+    letter-spacing: -0.1rem;
   `,
 };
 

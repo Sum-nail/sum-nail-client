@@ -59,7 +59,7 @@ const Header = styled.div`
   height: 6rem;
   width: 100%;
   display: flex;
-  border-bottom: 1px solid var(--gray-F2, #f2f2f2);
+  border-bottom: 0.1rem solid var(--gray-F2, #f2f2f2);
   justify-content: space-between;
   align-items: center;
 `;
@@ -113,7 +113,7 @@ const StoreTag = styled.div<{ index: number; selected: number }>`
   justify-content: center;
   align-items: center;
   border-radius: 3rem;
-  border: 1px solid ${(props) => (props.index == props.selected ? '#ff64c1' : 'var(--gray-E5, #e5e5e5)')};
+  border: 0.1rem solid ${(props) => (props.index == props.selected ? '#ff64c1' : 'var(--gray-E5, #e5e5e5)')};
   background: ${(props) =>
     props.index == props.selected
       ? `linear-gradient(

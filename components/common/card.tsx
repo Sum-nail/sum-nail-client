@@ -70,5 +70,5 @@ const LikeButton = styled.div`
   align-items: center;
   border-radius: 50%;
   background: var(--white, #fff);
-  filter: drop-shadow(1px 1px 8px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0.1rem 0.1rem 0.8rem rgba(0, 0, 0, 0.1));
 `;

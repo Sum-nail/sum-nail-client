@@ -39,7 +39,7 @@ const Header = styled.div`
   height: 6rem;
   width: 100%;
   display: flex;
-  border-bottom: 1px solid var(--gray-F2, #f2f2f2);
+  border-bottom: 0.1rem solid var(--gray-F2, #f2f2f2);
   justify-content: space-between;
   align-items: center;
 `;
@@ -47,7 +47,7 @@ const Header = styled.div`
 const Body = styled.div`
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--gray-F2, #f2f2f2) 0px;
+  border: 0.1rem solid var(--gray-F2, #f2f2f2) 0px;
   margin-top: 3rem;
   margin-left: -1.6rem;
   margin-right: -1.6rem;
@@ -58,8 +58,8 @@ const Record = styled.div`
   align-items: center;
   height: 6.4rem;
   padding: 0rem 3rem;
-  border-top: 1px solid var(--gray-F2, #f2f2f2);
-  border-bottom: 1px solid var(--gray-F2, #f2f2f2);
+  border-top: 0.1rem solid var(--gray-F2, #f2f2f2);
+  border-bottom: 0.1rem solid var(--gray-F2, #f2f2f2);
   color: ${({ theme }) => theme.colors.gray69};
   font: ${({ theme }) => theme.fonts.R15_2};
 `;
