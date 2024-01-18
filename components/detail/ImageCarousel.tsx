@@ -5,9 +5,18 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { SetStateAction, useState } from 'react';
 import { ImageIcon } from '@/public/icons';
+import { ShopDetail } from '@/api/nail-shops/types';
 
-function ImageCarousel() {
+interface ImageProps {
+  detailImages: string[];
+}
+
+function ImageCarousel(props: ImageProps) {
   //api 연동하면서  currentIndex / image.length로 map 돌려서 숫자로 표시할 예정입니다!
+
+  const { detailImages } = props;
+  console.log('사진사진사진', detailImages);
+
   const [slideIndex, setSlideIndex] = useState(0);
 
   const settings = {
@@ -34,13 +43,7 @@ function ImageCarousel() {
       </div>
     ),
   };
-  return (
-    <Slider {...settings}>
-      <ImageIcon />
-      <ImageIcon />
-      <ImageIcon />
-    </Slider>
-  );
+  return <Slider {...settings}>{/* <img src={detailImages} alt="detailImages" /> */}</Slider>;
 }
 
 export default ImageCarousel;
