@@ -1,6 +1,7 @@
 //훅 관련 폴더입니당!
 import { getShops, getSearchingShop, getShopDetails } from '@/api/nail-shops';
-import { useQuery } from '@tanstack/react-query';
+import { getStations, getStationsRecords, deleteStationsRecords, addStations } from '@/api/common';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 
 export const useGetShops = () => {
   const { data } = useQuery({
@@ -24,4 +25,39 @@ export const useGetShopDetails = (nailShopId: number) => {
     queryFn: () => getShopDetails(nailShopId),
   });
   return data;
+};
+
+export const useGetStations = (station: string) => {
+  const { data } = useQuery({
+    queryKey: ['Station', station],
+    queryFn: () => getStations(station),
+  });
+  return data;
+};
+
+export const useGetStationsRecords = () => {
+  const { data } = useQuery({
+    queryKey: ['StationRecord'],
+    queryFn: () => getStationsRecords(),
+  });
+  return data;
+};
+
+export const useAddStations = () => {
+  const queryClient = useQueryClient();
+
+  const mutation = useMutation({
+    mutationFn: addStations,
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['StationRecord'] }),
+  });
+  return { mutation };
+};
+export const useDeleteStationsRecords = () => {
+  const queryClient = useQueryClient();
+
+  const mutation = useMutation({
+    mutationFn: deleteStationsRecords,
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['StationRecord'] }),
+  });
+  return { mutation };
 };

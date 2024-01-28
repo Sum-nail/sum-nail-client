@@ -1,18 +1,25 @@
 import styled from '@emotion/styled';
 import { DeleteIcon } from '@/public/icons';
+import { useGetStationsRecords, useDeleteStationsRecords } from '@/hooks';
 
 function StationRecord() {
+  const data = useGetStationsRecords();
+  const { mutation: deleteStationRecord } = useDeleteStationsRecords();
+
+  if (!data) return <></>;
   return (
     <Main>
       <StationTags>
-        <StationTag>역삼역</StationTag>
-        <StationTag>디지털미디어시티역</StationTag>
-        <StationTag>답십리역</StationTag>
+        {data.stations.map((item) => (
+          <StationTag key={item}>{item}역</StationTag>
+        ))}
       </StationTags>
-      <RecordDeletion>
-        <DeleteIcon />
-        기록삭제
-      </RecordDeletion>
+      {data.stations.length > 0 && (
+        <RecordDeletion onClick={() => deleteStationRecord.mutate()}>
+          <DeleteIcon />
+          기록삭제
+        </RecordDeletion>
+      )}
     </Main>
   );
 }

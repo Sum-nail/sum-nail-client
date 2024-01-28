@@ -18,3 +18,7 @@ export interface StationInfo {
   stationsName: string;
   line: string;
 }
+
+export interface GetStationsRecordsOutput {
+  stations: string[];
+}
