@@ -23,7 +23,9 @@ function Layout({ children }: { children: React.ReactNode }) {
       <QueryClientProvider client={queryClient}>
         <RecoilRoot>
           <GlobalStyle />
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <ThemeProvider theme={theme}>
+            {children} <div id="modal-root"></div>
+          </ThemeProvider>
         </RecoilRoot>
       </QueryClientProvider>
     </body>
