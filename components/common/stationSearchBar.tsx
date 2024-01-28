@@ -32,14 +32,32 @@ function StationSearchBar({
     }
   }, [data]);
 
+  const debounce = <T extends (...args: any[]) => any>(fn: T, delay: number) => {
+    let timeout: ReturnType<typeof setTimeout>;
+
+    return (...args: Parameters<T>): ReturnType<T> => {
+      let result: any;
+      if (timeout) clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        result = fn(...args);
+      }, delay);
+      return result;
+    };
+  };
+
+  const onChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchText(e.target.value);
+  };
+
+  const debouncedOnChange = debounce<typeof onChange>(onChange, 500);
+
   return (
     <SearchContainer>
       <SearchBar
         ref={inputRef}
         placeholder={cntPage == 'search' ? '지하철 역 이름을 입력해주세요.' : '지하철역'}
-        value={searchText}
         onClick={cntPage == 'home' ? () => router.push('/search') : undefined}
-        onChange={(e) => setSearchText(e.target.value)}
+        onChange={debouncedOnChange}
       ></SearchBar>
       <MapIconWrapper>
         <MapPinIcon />
